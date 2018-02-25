@@ -6,6 +6,12 @@ const BrowserWindow = electron.BrowserWindow;
 
 const path = require('path');
 const url = require('url');
+const ipcMain = require('electron').ipcMain;
+
+// main.js
+ipcMain.on('transaction-form', function(event, data) {
+  console.log(data);
+});
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -54,6 +60,10 @@ app.on('activate', function () {
   if (mainWindow === null) {
     createWindow()
   }
+});
+
+ipcMain.on('transaction-form', (event, arg) => {
+  console.log(arg);
 });
 
 // In this file you can include the rest of your app's specific main process
