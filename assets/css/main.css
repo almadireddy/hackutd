@@ -1,0 +1,242 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #374245;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-weight: 300;
+  color: #f8f8f8;
+}
+
+.dropdown-group {
+  display: flex;
+  align-items: center;
+}
+  .dropdown-group .btn {
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 3px solid #FFA2A2;
+    font-size: 18px;
+    font-weight: 300;
+    transition: all .2s ease;
+    color: #f8f8f8;
+    margin-right: 15px;
+  }
+    .dropdown-group .btn:hover, .dropdown-group .btn:focus {
+      background: #FFA2A2;
+      color: #2b2b2b
+    }
+
+  .dropdown-group .dropdown-menu {
+    background: #5D6471;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+    .dropdown-group .dropdown-menu li {
+      padding: 15px;
+      font-size: 18px;
+      color: #FFA2A2;
+      transition: all .2s ease;
+    }
+      .dropdown-group .dropdown-menu li:hover {
+        cursor: pointer;
+        background: #f8f8f8;
+      }
+
+
+.input-group {
+  width: 150px;
+}
+  .input-group-prepend {
+    margin-right: 10px;
+  }
+  .input-group .input-group-text, input.form-control {
+    color: #f8f8f8;
+    font-size: 22px;
+    font-weight: 300;
+  }
+  .form-control:focus {
+    color: #f8f8f8;
+  }
+
+  .custom-file-control, .form-control, .is-focused .custom-file-control, .is-focused .form-control {
+    background-image: linear-gradient(0deg,#FFA2A2 3px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(240,240,240,.85) 2px,transparent 0); }
+
+  .btn-primary.custom-file-control:before, .btn.btn-primary {
+    color: #52BCFF;
+    background-color: transparent;
+    border-color: #ccc;
+    margin-top: 25px;
+    float: right;
+  }
+    .btn-primary.active.custom-file-control:before, .btn-primary.custom-file-control:active:before, .btn-primary.custom-file-control:focus:before, .btn-primary.custom-file-control:hover:before, .btn-primary.focus.custom-file-control:before, .btn.btn-primary.active, .btn.btn-primary.focus, .btn.btn-primary:active, .btn.btn-primary:focus, .btn.btn-primary:hover, .open>.btn-primary.dropdown-toggle.custom-file-control:before, .open>.btn.btn-primary.dropdown-toggle {
+      color: #FFA2A2;
+      background-color: hsla(0, 0%, 60%, .2);
+      border-color: hsla(0, 0%, 60%, .2);
+    }
+
+  .btn-primary.custom-file-control:before, .btn.btn-primary {
+    padding: 10px 15px;
+    font-size: 22px;
+    font-weight: 100
+
+  }
+
+  .username {
+    width: 250px;
+  }
+
+.navigation {
+  width: 100%
+}
+  .nav-upper {
+    background-color: #5D6471;
+  }
+    .nav-upper p {
+      padding: 25px 50px;
+      text-align: right;
+      color: #f8f8f8;
+      font-weight: 100;
+    }
+  .nav-middle {
+    padding: 25px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+    .nav-middle h1 {
+      font-size: 40px;
+      color: #FFA2A2;
+    }
+      #logo-left {
+        font-weight: 100;
+      }
+      #logo-right {
+        font-weight: 500;
+      }
+    .nav-middle p {
+      font-size: 28px;
+      color: #FFA2A2;
+      font-weight: 100;
+    }
+  .nav-lower {
+    width: 100%;
+    height: 5px;
+    background: radial-gradient(#52BCFF, #FFA2A2)
+  }
+
+.content {
+  display: flex;
+  padding: 50px 50px 0 50px
+}
+  .transactions {
+    flex: 1;
+  }
+    .transaction-header, .balance-header {
+      margin-bottom: 50px;
+    }
+      .transaction-header h2, .balance-header h2 {
+        font-size: 50px;
+        font-weight: 500;
+      }
+        .transaction-header::after, .balance-header::after {
+          content: "";
+          display: block;
+          position: relative;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 5px;
+          border-radius: 4px;
+          background: linear-gradient(to right, #FFA2A2, #52BCFF);
+        }
+
+        .balance-header::after {
+          background: linear-gradient(to left, #FFA2A2, #52BCFF);
+        }
+
+  form {
+    padding: 15px
+  }
+
+
+.content-right {
+  flex: 1;
+  display: flex;
+  padding: 0 50px;
+  flex-direction: column;
+  font-weight: 100;
+  overflow-y: scroll;
+}
+.content-right-top {
+  margin-bottom: 50px;
+}
+  .balance-header {
+     width: 100%;
+  }
+
+  .offers {
+    padding: 15px
+  }
+    .offers h3 {
+      margin-bottom: 25px;
+    }
+    .offers h3 a {
+      margin-right: 10px;
+    }
+      .symbol {
+        font-size: 22px;
+        font-weight: 300;
+      }
+
+a {
+  color: #f8f8f8;
+}
+  a:hover {
+    color: #FFA2A2;
+  }
+
+p {
+  margin-bottom: 0;
+}
+
+.transaction-record-list {
+  overflow: scroll;
+}
+.transaction-record {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f8f8f8;
+  color: #5D6471;
+  border-radius: 10px;
+  box-shadow: 5px 5px 25px rgba(40, 40, 40, 0.18);
+  padding: 25px;
+  margin-bottom: 50px;
+}
+  .transaction-record h3 {
+    font-weight: 100;
+  }
+
+  .transaction-record .reciever {
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+  .transaction-record .sender {
+    font-weight: 100;
+    font-size: 18px;
+  }
+  .transaction-record .amountSent {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .transaction-record .flex-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }

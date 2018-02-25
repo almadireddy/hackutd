@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+
+<body>
+  <div class="navigation">
+    <div class="nav-upper">
+      <div>
+        <p>ID: 0xafu88a7s66f6df8800</p>
+      </div>
+    </div>
+    <div class="nav-middle">
+      <h1><span id="logo-left">free</span><span id="logo-right">market</span></h1>
+      <p>fast, secure finance powered by blockchain.</p>
+    </div>
+    <div class="nav-lower"></div>
+  </div>
+
+  <div class="content">
+    <div class="transactions">
+      <div class="transaction-header">
+        <h2>Make Transaction</h2>
+      </div>
+      <form action="" method="post">
+        <input type="hidden" id="transaction-type" class="transaction-type-hidden">
+
+        <div class="btn-group dropdown-group">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">Action</button>
+          <ul class="dropdown-menu">
+            <li onclick="$('#transaction-type').val('pay'); $('.dropdown-toggle').html('Pay')">Pay</li>
+            <li onclick="$('#transaction-type').val('request'); $('.dropdown-toggle').html('Request')">Request</li>
+            <li onclick="$('#transaction-type').val('borrow'); $('.dropdown-toggle').html('Borrow')">Borrow</li>
+            <li id="bottom-choice" onclick="$('#transaction-type').val('lease'); $('.dropdown-toggle').html('Lease')">Lease</li>
+          </ul>
+        </div>
+
+        <div class="input-group username">
+          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group amount">
+          <input placeholder="Amount" type="text" class="form-control" id="amount" aria-label="Amount">
+        </div>
+
+        <input class="btn btn-primary" type="submit" value="Submit">
+
+      </form>
+    </div>
+    <div class="content-right">
+      <div class="content-right-top">
+        <div class="balance-header">
+          <h2>Balance: 1000 <span class="symbol">USD</span></h2>
+          </div>
+          <div class="offers">
+            <h3><a href="">View credit information</a> <i class="fas fa-chevron-right"></i></h3>
+            <h3><a href="">Apply for a loan</a> <i class="fas fa-chevron-right"></i></h3>
+          </div>
+      </div>
+      <div class="content-right-bottom">
+        <div class="transaction-history">
+          <div class="balance-header">
+            <h2>Block Transaction History</h2>
+          </div>
+          <div class="transaction-record-list">
+            <div class="transaction-record">
+              <h3>Txn: 0xqn2u7137tcsudhb2910, Type: Borrow</h3>
+              <hr>
+              <p class="reciever">Reciever: 4ubhbfiwudfb9w8fun</p>
+              <div class="flex-group">
+                <p class="sender">Sender: 2134afrg9382savr318yhbqjb</p>
+                <p class="amountSent">$40.00</p>
+              </div>
+            </div>
+
+            <div class="transaction-record">
+              <h3>Txn: 0xqn2u7137tcsudhb2910, Type: Pay</h3>
+              <hr>
+              <p class="reciever">Reciever: 4ubhbfiwudfb9w8fun</p>
+              <div class="flex-group">
+                <p class="sender">Sender: 2134afrg9382savr318yhbqjb</p>
+                <p class="amountSent">$40.00</p>
+              </div>
+            </div>
+
+            <div class="transaction-record">
+              <h3>Txn: 0xqn2u7137tcsudhb2910</h3>
+              <hr>
+              <p class="reciever">Reciever: 4ubhbfiwudfb9w8fun</p>
+              <div class="flex-group">
+                <p class="sender">Sender: 2134afrg9382savr318yhbqjb</p>
+                <p class="amountSent">$40.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+  <script src="assets/js/jquery.min.js" ></script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <script>require('electron-connect').client.create()</script>
+</body>
+</html>
